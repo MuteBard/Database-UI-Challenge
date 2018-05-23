@@ -5,7 +5,7 @@ $(document).ready(() => {
             success: data => {
                 console.log(data)
                 data.forEach(appointment => {
-                    $('#box1a').append(`<tr>
+                    $('#box1c').append(`<tr class="box2">
                                             <td>${appointment.bookdate}</td>
                                             <td>${appointment.booktime}</td>
                                             <td>${appointment.description}</td>

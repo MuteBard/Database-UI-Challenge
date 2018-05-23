@@ -7,14 +7,40 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-        <table class="box1a" id="box1a">
-                <tr class="box2a">
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Description</th>
-                </tr>
-                <!-- Added tables go here -->
-        </table>
+        <div>
+            <div class="box0a">
+                <div class="box1a">
+                    <div class="box2a">
+                        <button class="buttonstyle">
+                            Add New
+                        </button>
+                    </div>
+                </div>
+                <div class="box1b">
+                    <div class="box2b">
+                        <form class="box3a" action="clientside.js">
+                            <div class="box4a">
+                                <input class="box5a" type="text" name="Search" placeholder="Search">
+                            </div>
+                            <div class="box4b">
+                                <input class="box5b buttonstyle" type="submit" value="Search">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <table class="box1c" id="box1c">
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Description</th>
+                            </tr>
+                            <!-- Added tables go here -->
+                    </table>
+                </div>
+            </div>
+        </div>
+
         <script src="clientside.js"></script>
     </body>
 </html>

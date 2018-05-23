@@ -1,7 +1,77 @@
 *{
     box-sizing: border-box;
+    font-family: Consolas,monaco,monospace; 
+    
 }
 
-.box1a{
-    width : 100%;
+.box0{
+    display : flex;
 }
+
+/* .box1a, .box1b, .box1c{
+    border : 5px solid red;
+} */
+
+.box1a{
+    display:flex;
+    justify-content: center;
+}
+
+.box2a{
+    /* border : 5px solid greenyellow; */
+    margin: 1em 25em 1em 1em;
+}
+
+.box3a{
+    display: flex;
+    justify-content: center;
+    margin: 1em 7.5em 2em 1em;
+}
+
+
+.box4a{
+    /* border : 5px solid blue; */
+
+}
+
+.box5a{
+    font-size: 1.2em;
+    padding : 0.45em;
+    margin-right : 1.3em;
+    border : 3px solid #D3D3D3;
+    border-radius: 2px;  
+}
+
+.buttonstyle{
+    font-size: 1.2em;
+    padding : 0.6em;
+    background-color: #66b3ff;
+    border: none; 
+    border-radius: 2px; 
+}
+
+
+table{
+    display : flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+/* color all the even cells children of td white */
+tr:nth-child(even){
+    background-color: #D3D3D3;
+}
+
+/* color all the even cells children of tr gray */
+tr:nth-child(odd){
+    background-color: #F5F4F5;
+}
+
+th, td{
+    /* border : 5px solid green; */
+    width: 10rem;
+    height: 5rem;
+    text-align: center;
+}
+
