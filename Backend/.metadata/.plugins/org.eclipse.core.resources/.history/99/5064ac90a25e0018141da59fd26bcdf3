@@ -1,0 +1,20 @@
+package com.example.demo.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+
+@Component
+public class AppointmentDao {
+	private final String GET_LINKS = "SELECT bookdate, booktime, description FROM appointment";
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+	
+	public List<Appointments> getAllLinks() {
+		return jdbcTemplate.query(GET_LINKS, new BeanPropertyRowMapper<>(Appointments.class));
+	}
+	
+
+}
