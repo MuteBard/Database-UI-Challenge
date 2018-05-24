@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: Consolas,monaco,monospace; 
+    border : 5px solid red;
     
 }
 
@@ -19,27 +20,33 @@
 
 .box2a{
     /* border : 5px solid greenyellow; */
-    margin: 1em 25em 1em 1em;
+    margin: 1em 1em 1em 1em;
 }
 
 .box3a{
+    display : flex;
+    justify-content: space-around;
+}
+
+.box3c{
     display: flex;
     justify-content: center;
-    margin: 1em 7.5em 2em 1em;
+    margin: 1em 1em 2em 1em;
 }
 
 
-.box4a{
-    /* border : 5px solid blue; */
 
-}
 
-.box5a{
+.box5b, .secretbox3a, .secretbox3b, .secretbox3c{
     font-size: 1.2em;
     padding : 0.45em;
     margin-right : 1.3em;
     border : 3px solid #D3D3D3;
     border-radius: 2px;  
+}
+
+.secretbox3a, .secretbox3b, .secretbox3c{
+    margin : 0.7em;
 }
 
 .buttonstyle{
