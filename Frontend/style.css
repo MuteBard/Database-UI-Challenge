@@ -1,17 +1,17 @@
 *{
     box-sizing: border-box;
     font-family: Consolas,monaco,monospace; 
-    border : 5px solid red;
+    /* border : 5px solid red; */
     
 }
 
-.box0{
-    display : flex;
-}
+
 
 /* .box1a, .box1b, .box1c{
     border : 5px solid red;
 } */
+
+
 
 .box1a{
     display:flex;
@@ -47,6 +47,11 @@
 
 .secretbox3a, .secretbox3b, .secretbox3c{
     margin : 0.7em;
+}
+
+.secretbox3a{
+    padding-right :2.6em;
+    text-align: center;
 }
 
 .buttonstyle{
