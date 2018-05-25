@@ -11,20 +11,21 @@
             <div class="box0a">
                 <div class="box1a">
                     <div class="box2a">
-                        <div class="box3a">
-                            <div class="box4a">
-                                <button class="buttonstyle box5a" id="addNew">New</button>
+                        <form action="/http://localhost:8080/getAppointments" onsubmit="return false" id="#form" method="get">
+                            <div class="box3a">
+                                <div class="box4a">
+                                    <button class="buttonstyle box5a" id="addNew">New</button>
+                                </div>
+                                <div class="box4b" id="box4b">
+                                    <!-- toggling cancel button goes here -->
+                                </div>
+                                
                             </div>
-                            <div class="box4b" id="box4b">
-                                <!-- toggling cancel button goes here -->
-                            </div>
-                            
-                        </div>
 
-                        <div class="box3b" id="box3b">
-                            <!-- toggle content goes here -->
-                        </div>
-                        
+                            <div class="box3b" id="box3b">
+                                <!-- toggle content goes here -->
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="box1b">
@@ -34,7 +35,7 @@
                                 <input class="box5b" type="text" name="Search" placeholder="Search">
                             </div>
                             <div class="box4d">
-                                <input class="box5c buttonstyle" type="submit" value="Search">
+                                <input class="box5c buttonstyle" id="search" value="Search">
                             </div>
                         </form>
                     </div>
