@@ -4,33 +4,38 @@ var isFutureDate = (dateString) => new Date(dateString) > new Date()
 
 $(document).ready(() => {
 
-    //make a GET request upon pressing get Search button
-    document.getElementById("search").onclick = () => {
-
-        //empty the data on box2 if something is there
-
-        //make this part work left off
-        if (!$('#box2').on("is:empty")){
-            // $("#box2").empty()
-            console.log("TEst")
+    //make a GET request upon pressing get Search button    
+    $("#search").on("click", () => {
+    
+        //remove all table data from the table while it exists
+        while(!$('#box2').text() == ''){
+            $('#box2').remove()
         }
-
+        
+        //make an ajax call to grab table data from the database
         $.ajax({
-                type: "GET",
-                url:`http://localhost:8080/getAppointments`,
-                success: data => {
-                    console.log(data)
-                    data.forEach(appointment => {
-                        $('#box1c').append(`<tr class="box2" id="box2">
-                                                <td>${appointment.bookdate}</td>
-                                                <td>${appointment.booktime}</td>
-                                                <td>${appointment.description}</td>
-                                            </tr>`)
-                    })
-                },
-                failure: err => console.log(err)
-            })
-    }
+            //set the verb as GET
+            type: "GET",
+            //set the url the route created in the Spring server
+            url:`http://localhost:8080/getAppointments`,
+            success: data => {
+                //create a forEach loop that iterates through the iterable data and grab the values one by one, called appointment. Then put the data inside HTML
+                data.forEach(appointment => {
+                    $('#box1c').append(`<tr class="box2" id="box2">
+                                            <td class="secretbox3a" id="secretbox3">${appointment.bookdate}</td>
+                                            <td class="secretbox3b" id="secretbox3">${appointment.booktime}</td>
+                                            <td class="secretbox3c" id="secretbox3">${appointment.description}</td>
+                                        </tr>`)
+                })
+            },
+            failure: err => console.log(err)
+
+            
+        })
+
+       
+        
+    })
    
     
     //when the New button is pressed..
@@ -57,10 +62,11 @@ $(document).ready(() => {
         $('#addNew').text() == "Add" 
             ? 
             //delay was added since it would apply the attribute to quickly
-            setTimeout(() => $('form').attr("onsubmit", "return true") , 2000)
+            setTimeout(() => $('form').attr("onsubmit", "return true") , 10)
             : 
             null
 
+            
         //Create three input fields below the Add and Cancel buttons that manage
         //Date, Time and Description
         $('#box3b').append(
@@ -68,13 +74,13 @@ $(document).ready(() => {
             ? 
             `
             <div class="secretbox2a">
-                <input class="secretbox3a" id="secretbox3a" href="javascript:validate()" type="date" name="Search" placeholder="Date">
+                <input class="secretbox3d" id="secretbox3d" type="date" name="Search" placeholder="Date">
             </div>
             <div class="secretbox2b">
-                <input class="secretbox3b"  type="text" name="Search" placeholder="Time">
+                <input class="secretbox3e"  type="text" name="Search" placeholder="Time">
             </div>
             <div class="secretbox2c">
-                <input class="secretbox3c" type="text" name="Search" placeholder="Desc">
+                <input class="secretbox3f" type="text" name="Search" placeholder="Desc">
             </div>
             ` 
             : 

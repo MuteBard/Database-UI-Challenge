@@ -16,11 +16,15 @@
 .box1a{
     display:flex;
     justify-content: center;
+    /* border : 5px solid blueviolet; */
 }
+
+
 
 .box2a{
     /* border : 5px solid greenyellow; */
-    margin: 1em 1em 1em 1em;
+    width:100;
+    margin: 1em 28.5em 1em 2em;
 }
 
 .box3a{
@@ -31,13 +35,21 @@
 .box3c{
     display: flex;
     justify-content: center;
-    margin: 1em 1em 2em 1em;
+
+    margin: 1em 6em 2em 0em;
+    /* width : 100%; */
+    justify-content: center;
+}
+
+.box4a{
+    justify-content: flex-start;
+    padding-bottom: 1.3em;
+    
 }
 
 
 
-
-.box5b, .secretbox3a, .secretbox3b, .secretbox3c{
+.box5b, .secretbox3d, .secretbox3e, .secretbox3f{
     font-size: 1.2em;
     padding : 0.45em;
     margin-right : 1.3em;
@@ -45,13 +57,17 @@
     border-radius: 2px;  
 }
 
-.secretbox3a, .secretbox3b, .secretbox3c{
+.secretbox3d, .secretbox3e, .secretbox3f{
     margin : 0.7em;
 }
 
-.secretbox3a{
+.secretbox3d{
     padding-right :2.6em;
     text-align: center;
+    
+}
+.box5c{
+    /* width : 35%; */
 }
 
 .buttonstyle{
@@ -65,9 +81,7 @@
 
 table{
     display : flex;
-    flex-direction: row;
     justify-content: center;
-    
 }
 
 /* color all the even cells children of td white */
