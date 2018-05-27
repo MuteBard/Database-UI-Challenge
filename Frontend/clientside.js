@@ -73,13 +73,13 @@ $(document).ready(() => {
             currentText == "New" 
             ? 
             `<div class="secretbox2a">
-                <input class="secretbox3d" id="secretbox3d" type="date" name="Search" placeholder="Date">
+                DATE <input class="secretbox3d" id="secretbox3d" type="date" name="Search">
             </div>
             <div class="secretbox2b">
-                <input class="secretbox3e"  type="text" name="Search" placeholder="Time">
+                TIME <input class="secretbox3e"  type="text" name="Search">
             </div>
             <div class="secretbox2c">
-                <input class="secretbox3f" type="text" name="Search" placeholder="Desc">
+                DESC <input class="secretbox3f" type="text" name="Search">
             </div>` 
             : 
             $('#box3b').empty())
