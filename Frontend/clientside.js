@@ -52,6 +52,12 @@ $(document).ready(() => {
             :
             $('#box4b').empty()
         )
+
+        //originally, adding the three input boxes would make styling off center. Therefore, when
+        //the class is box2aOFF is activated when the button says new and is the class
+        //box2aON is activated when the button says Add.
+        $('#box2a').removeClass('box2aOFF');
+        $('#box2a').addClass('box2aON');
         
         //set time out is added because the form would not make a request as soon as the attribute was
         //changed to return true.
@@ -92,6 +98,9 @@ $(document).ready(() => {
         $('#addNew').text(currentText == "New" ? "Add" : "New");
         //set the attribute of the new/add button back to return false to prevent sending
         $('form').attr("onsubmit", "return false")
+        //reapply the original class css for this id
+        $('#box2a').removeClass('box2aON');
+        $('#box2a').addClass('box2aOFF');
         
     })
 })

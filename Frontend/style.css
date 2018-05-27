@@ -21,20 +21,25 @@
 
 
 
-.box2a{
+.box2aOFF{
     /* border : 5px solid greenyellow; */
     width:100;
-    margin: 1em 28.5em 1em 2em;
+    margin: 1em 28em 0em 1em;
     /* border : 3px solid blue; */
 }
 
+.box2aON{
+    /* border : 5px solid greenyellow; */
+    width:100;
+    margin: 1em 14.5em 0em 1em;
+} 
+
 .box3a{
     display : flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* border : 5px solid purple; */
+    padding : 0 1em 0 1em;
 }
-/* .box3b{
-    border : 3px solid red;
-} */
 
 .box3c{
     display: flex;
