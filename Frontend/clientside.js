@@ -28,13 +28,8 @@ $(document).ready(() => {
                                         </tr>`)
                 })
             },
-            failure: err => console.log(err)
-
-            
-        })
-
-       
-        
+            failure: err => console.log(err)         
+        })     
     })
    
     
@@ -57,23 +52,21 @@ $(document).ready(() => {
             :
             $('#box4b').empty()
         )
-
-        //Upon pressing the Add button the page reloads
-        $('#addNew').text() == "Add" 
-            ? 
-            //delay was added since it would apply the attribute to quickly
-            setTimeout(() => $('form').attr("onsubmit", "return true") , 10)
-            : 
-            null
-
+        
+        //set time out is added because the form would not make a request as soon as the attribute was
+        //changed to return true.
+        //set the attribute to true when the button does not say add, otherwise there is a bug  
+        //when you press new, then cancel and then new again, it sends the form. this bug is fixed
+        //line 104, under the #box4b ca
+        setTimeout(() => $('form').attr("onsubmit", "return true") , 100)
+            
             
         //Create three input fields below the Add and Cancel buttons that manage
         //Date, Time and Description
         $('#box3b').append(
             currentText == "New" 
             ? 
-            `
-            <div class="secretbox2a">
+            `<div class="secretbox2a">
                 <input class="secretbox3d" id="secretbox3d" type="date" name="Search" placeholder="Date">
             </div>
             <div class="secretbox2b">
@@ -81,8 +74,7 @@ $(document).ready(() => {
             </div>
             <div class="secretbox2c">
                 <input class="secretbox3f" type="text" name="Search" placeholder="Desc">
-            </div>
-            ` 
+            </div>` 
             : 
             $('#box3b').empty())
     
@@ -98,11 +90,8 @@ $(document).ready(() => {
         //toggle the Add button text back to New
         var currentText = $('#addNew').text();
         $('#addNew').text(currentText == "New" ? "Add" : "New");
+        //set the attribute of the new/add button back to return false to prevent sending
+        $('form').attr("onsubmit", "return false")
         
     })
-
-
-
-        
-
 })

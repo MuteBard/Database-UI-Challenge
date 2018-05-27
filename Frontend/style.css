@@ -25,12 +25,16 @@
     /* border : 5px solid greenyellow; */
     width:100;
     margin: 1em 28.5em 1em 2em;
+    /* border : 3px solid blue; */
 }
 
 .box3a{
     display : flex;
     justify-content: space-around;
 }
+/* .box3b{
+    border : 3px solid red;
+} */
 
 .box3c{
     display: flex;
