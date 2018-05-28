@@ -1,0 +1,29 @@
+package com.example.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.dao.AppointmentDao;
+import com.example.demo.model.Appointments;
+
+@Component
+public class AppointmentService {
+	
+	@Autowired
+	private AppointmentDao dao;
+	
+	public List<Appointments>getAppointments(){
+		return dao.getAllAppointments();
+	}
+	
+	public List<Appointments>addAppointment(){
+		return dao.addAppointment();
+	}
+	
+	
+
+	
+
+}

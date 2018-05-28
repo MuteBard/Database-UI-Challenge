@@ -1,5 +1,8 @@
 package com.example.demo.config;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -23,7 +26,10 @@ public class CommonConfig {
 	
 	@Bean
 	public JdbcTemplate getJdbcTemplate() {
+		System.out.println(dataSource);
 		return new JdbcTemplate(dataSource);
 	}
+	
+	
 
 }

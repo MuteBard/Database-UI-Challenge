@@ -18,6 +18,11 @@ public class AppointmentService {
 		return dao.getAllAppointments();
 	}
 	
+	public void addAppointment(String date, String time, String desc){
+		dao.addAppointment(date, time, desc);
+	}
+	
+	
 
 	
 
