@@ -2,7 +2,6 @@ package com.example.demo.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,12 +26,10 @@ public class CommonConfig {
 	
 	@Bean
 	public JdbcTemplate getJdbcTemplate() {
+		System.out.println(dataSource);
 		return new JdbcTemplate(dataSource);
 	}
 	
-	@Bean
-	public Connection getConnection() throws SQLException {
-		return DriverManager.getConnection ("jdbc:postgresql://localhost:5432/Appointments");
-	}
+	
 
 }

@@ -24,14 +24,13 @@ public class AppointmentDao {
 	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
-	@Autowired 
-	private Connection con;
-	
 	public List<Appointments> getAllAppointments() {
 		return jdbcTemplate.query(GET_APPOINTMENTS, new BeanPropertyRowMapper<>(Appointments.class));
 	}
 	
 	public List<Appointments> getmatchingAppointments(String query) throws Exception{
+		System.out.println(query);
+		Connection con = DriverManager.getConnection ("jdbc:postgresql://localhost:5432/Appointments");
 	    PreparedStatement statement = con.prepareStatement(GET_MATCHING_APPOINTMENTS);
 	    statement.setString(1, "%"+query+"%"); //query with wild card
 	     
