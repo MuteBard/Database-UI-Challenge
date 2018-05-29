@@ -52,14 +52,14 @@ CREATE TABLE appointment(
 ```
 ![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451053572956880909/Screen_Shot_2018-05-29_at_12.05.45_PM.png)
 
-**Executing**<br/>
-Be sure to do a Maven Update</br>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051789098156052/Screen_Shot_2018-05-29_at_11.56.41_AM.png)
-Be sure to do a Clean package</br>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051729241243658/Screen_Shot_2018-05-29_at_11.57.06_AM.png)
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051703370907648/Screen_Shot_2018-05-29_at_11.57.19_AM.png)
-Run as a Spring Boot App</br>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051758270283776/Screen_Shot_2018-05-29_at_11.56.50_AM.png)
+### Executing Code in STS
+**Be sure to do a Maven Update**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051789098156052/Screen_Shot_2018-05-29_at_11.56.41_AM.png)<br/>
+**Be sure to do a Clean package**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051729241243658/Screen_Shot_2018-05-29_at_11.57.06_AM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051703370907648/Screen_Shot_2018-05-29_at_11.57.19_AM.png)<br/>
+**Run as a Spring Boot App**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451051758270283776/Screen_Shot_2018-05-29_at_11.56.50_AM.png)<br/>
 
 
 ### Visualizing Data in Frontend 
@@ -67,6 +67,28 @@ Run as a Spring Boot App</br>
 From the parent root folder, go to Frontend directory and open index.html with google chrome 
 
 
+### Demo
+**Start**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056786624086016/Screen_Shot_2018-05-29_at_12.12.02_PM.png)<br/>
 
+**ADD and Cancel**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056785533566986/Screen_Shot_2018-05-29_at_12.12.28_PM.png)<br/>
 
+**Filling out the form with First Entry**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056784510156811/Screen_Shot_2018-05-29_at_12.13.36_PM.png)<br/>
+
+**Retriving all the data in database with blank search**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056783478226954/Screen_Shot_2018-05-29_at_12.16.39_PM.png)<br/>
+
+**Adding Second Entry in the form**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056781523943449/Screen_Shot_2018-05-29_at_12.17.09_PM.png)<br/>
+
+**Retriving all the data in database with blank search again**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056781343588353/Screen_Shot_2018-05-29_at_12.17.14_PM.png)<br/>
+
+**Adding Third Entry in the form**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056779791564830/Screen_Shot_2018-05-29_at_12.18.00_PM.png)<br/>
+
+**Retriving all the data in database that matches search query**<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056778675748885/Screen_Shot_2018-05-29_at_12.18.08_PM.png)<br/>
 
