@@ -30,16 +30,6 @@ public class AppointmentController {
 		return as.getAppointments();
 	}
 	
-
-	@CrossOrigin
-	@PostMapping("/getmatchingAppointments")
-	@ResponseBody
-	public List<Appointments> getMatchingAppointments(@RequestBody String body) throws Exception{
-		JSONObject json = new JSONObject(body);
-		return as.getmatchingAppointments(json.getString("search"));
-		
-	}
-	
 	@CrossOrigin
 	@PostMapping("/addAppointment")
 	@ResponseBody
@@ -49,7 +39,6 @@ public class AppointmentController {
 		return new ResponseEntity<String>(body, HttpStatus.OK);
 		
 	}
-	
 	
 
 }

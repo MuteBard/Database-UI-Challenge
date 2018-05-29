@@ -18,8 +18,8 @@ public class AppointmentService {
 		return dao.getAllAppointments();
 	}
 	
-	public List<Appointments>getmatchingAppointments(String query) throws Exception{
-		return dao.getmatchingAppointments(query);
+	public List<Appointments>getmatchingAppointments(){
+		return dao.getmatchingAppointments();
 	}
 	
 	

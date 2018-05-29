@@ -34,7 +34,7 @@ public class AppointmentController {
 	@CrossOrigin
 	@PostMapping("/getmatchingAppointments")
 	@ResponseBody
-	public List<Appointments> getMatchingAppointments(@RequestBody String body) throws Exception{
+	public List<Appointments> getMatchingAppointments(@RequestBody String body) throws JSONException{
 		JSONObject json = new JSONObject(body);
 		return as.getmatchingAppointments(json.getString("search"));
 		

@@ -17,7 +17,7 @@ import com.example.demo.model.Appointments;
 public class AppointmentDao {
 	private final String GET_APPOINTMENTS = "SELECT bookdate, booktime, description FROM appointment";
 	private final String ADD_APPOINTMENT = "INSERT INTO appointment VALUES (DEFAULT, ?, ?, ?)";
-	private final String GET_MATCHING_APPOINTMENTS = "SELECT * FROM appointment WHERE description ilike ?";
+	private final String GET_MATCHING_APPOINTMENTS = "SELECT * FROM appointment WHERE desc ilike ?";
 	
 	
 	

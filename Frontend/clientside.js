@@ -6,12 +6,18 @@ $(document).ready(() => {
 
 
     //make a GET request upon pressing get Search button    
-    $("#search").on("click", () => {
+    $("#searchbutton").on("click", () => {
     
         //remove all table data from the table while it exists
         while(!$('#box2').text() == ''){
             $('#box2').remove()
         }
+
+        let json = {"search" : $("#searchfield").val() };
+
+        json.search == ""
+        
+        ?
         
         //make an ajax call to grab table data from the database
         $.ajax({
@@ -30,7 +36,31 @@ $(document).ready(() => {
                 })
             },
             failure: err => console.log(err)         
-        })     
+        })  
+        
+        :
+        
+        $.ajax({
+            url: `http://localhost:8080/getmatchingAppointments`,
+            data: JSON.stringify(json),
+            method: 'post',
+            dataType: 'JSON',
+            contentType: 'application/json',
+            success: data => {
+                //create a forEach loop that iterates through the iterable data and grab the values one by one, called appointment. Then put the data inside HTML
+                data.forEach(appointment => {
+                    $('#box1c').append(`<tr class="box2" id="box2">
+                                            <td class="secretbox3a" id="secretbox3">${appointment.bookdate}</td>
+                                            <td class="secretbox3b" id="secretbox3">${appointment.booktime}</td>
+                                            <td class="secretbox3c" id="secretbox3">${appointment.description}</td>
+                                        </tr>`)
+                })
+            },
+            failure: err => console.log(err)   
+
+
+        })
+
     })
    
     
