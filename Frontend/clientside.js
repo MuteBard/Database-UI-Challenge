@@ -1,5 +1,5 @@
 let convertData = (obj) => {
-    let dateStr = (new Date(obj.date)).toString()
+    let dateStr = (new Date(obj.date + " EDT")).toString()
     let dateArr = dateStr.split(' ')
     obj["date"] =`${dateArr[1]} ${dateArr[2]}`
     return obj
