@@ -75,20 +75,20 @@ From the parent root folder, go to Frontend directory and open index.html with g
 ![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056785533566986/Screen_Shot_2018-05-29_at_12.12.28_PM.png)<br/>
 
 **Filling out the form with First Entry**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056784510156811/Screen_Shot_2018-05-29_at_12.13.36_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084373027192853/Screen_Shot_2018-05-29_at_2.05.31_PM.png)<br/>
 
 **Retriving all the data in database with blank search**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056783478226954/Screen_Shot_2018-05-29_at_12.16.39_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084371672170498/Screen_Shot_2018-05-29_at_2.05.38_PM.png)<br/>
 
 **Adding Second Entry in the form**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056781523943449/Screen_Shot_2018-05-29_at_12.17.09_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084370539708417/Screen_Shot_2018-05-29_at_2.06.31_PM.png)<br/>
 
 **Retriving all the data in database with blank search again**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056781343588353/Screen_Shot_2018-05-29_at_12.17.14_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084368820174851/Screen_Shot_2018-05-29_at_2.06.41_PM.png)<br/>
 
 **Adding Third Entry in the form**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056779791564830/Screen_Shot_2018-05-29_at_12.18.00_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084367763341334/Screen_Shot_2018-05-29_at_2.07.38_PM.png)<br/>
 
 **Retriving all the data in database that matches search query**<br/>
-![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451056778675748885/Screen_Shot_2018-05-29_at_12.18.08_PM.png)<br/>
+![picture alt](https://cdn.discordapp.com/attachments/429357870111391745/451084364353110026/Screen_Shot_2018-05-29_at_2.07.51_PM.png)<br/>
 
