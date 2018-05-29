@@ -1,8 +1,7 @@
 CREATE TABLE appointment(
 	id serial primary key,
-	bookdate date,
-	booktime time with time zone,
-	description varchar(255)
-); 
+	bookdate text,
+	booktime text,
+	description text
+);
 
-SET timezone TO 'US/Eastern';
