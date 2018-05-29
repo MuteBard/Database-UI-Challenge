@@ -1,0 +1,48 @@
+package com.example.demo.controller;
+
+import java.util.HashMap;
+import java.util.List;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.model.Appointments;
+import com.example.demo.service.AppointmentService;
+
+@RestController
+public class AppointmentController {
+	
+	@Autowired
+	private AppointmentService as;
+	
+	@CrossOrigin
+	@GetMapping("/getAppointments")
+	public List<Appointments> getAppointmentList(){
+		return as.getAppointments();
+	}
+	
+	@CrossOrigin
+	@PostMapping("/addAppointment")
+	@ResponseBody
+	public ResponseEntity<String> addAppointment(@RequestBody String body) throws JSONException{
+		System.out.println(body);
+		JSONObject json = new JSONObject(body);
+		System.out.println(json.getString("date"));
+		System.out.println(json.getString("time"));
+		System.out.println(json.getString("desc"));
+		as.addAppointment(json.getString("date"), json.getString("time"), json.getString("desc"));
+		return new ResponseEntity<String>(body, HttpStatus.OK);
+		
+	}
+	
+
+}

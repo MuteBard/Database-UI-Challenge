@@ -51,6 +51,7 @@
 }
 
 .box4a{
+    /* display : flex; */
     justify-content: flex-start;
     padding-bottom: 1.3em;
     

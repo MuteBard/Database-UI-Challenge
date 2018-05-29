@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.json.JSONException;
@@ -32,11 +33,9 @@ public class AppointmentController {
 	@CrossOrigin
 	@PostMapping("/addAppointment")
 	@ResponseBody
-	public ResponseEntity<String> addAppointment(@RequestBody String body){
-		System.out.println(body);
-//		JSONObject jObject = new JSONObject(data);
-//		System.out.println(jObject);
-//		as.addAppointment();
+	public ResponseEntity<String> addAppointment(@RequestBody String body) throws JSONException{
+		JSONObject json = new JSONObject(body);
+		as.addAppointment(json.getString("date"), json.getString("time"), json.getString("desc"));
 		return new ResponseEntity<String>(body, HttpStatus.OK);
 		
 	}

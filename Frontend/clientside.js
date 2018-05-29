@@ -4,6 +4,7 @@ var isFutureDate = (dateString) => new Date(dateString) > new Date()
 
 $(document).ready(() => {
 
+
     //make a GET request upon pressing get Search button    
     $("#search").on("click", () => {
     
@@ -15,7 +16,7 @@ $(document).ready(() => {
         //make an ajax call to grab table data from the database
         $.ajax({
             //set the verb as GET
-            type: "GET",
+            method: "GET",
             //set the url the route created in the Spring server
             url:`http://localhost:8080/getAppointments`,
             success: data => {
@@ -35,6 +36,24 @@ $(document).ready(() => {
     
     //when the New button is pressed..
     $('#addNew').click(() => {
+
+        if ($('form').attr("onsubmit") == "return true"){
+            $("form").submit((e) => {
+                
+              });
+            let json = {}
+            //create an array of the serialized data obtained and put it in a for..of loop to properly construct some json
+            for(let obj of $('form').serializeArray()){
+                json[obj.name] = obj.value
+            }      
+            $.ajax({
+                url: `http://localhost:8080/addAppointment`,
+                data: JSON.stringify(json),
+                method: 'post',
+                dataType: 'JSON',
+                contentType: 'application/json'  
+            })
+        }
 
         //Toggle the text inside the New button to Add.
         var currentText = $('#addNew').text();
@@ -73,18 +92,21 @@ $(document).ready(() => {
             currentText == "New" 
             ? 
             `<div class="secretbox2a">
-                DATE <input class="secretbox3d" id="secretbox3d" type="date" name="Search">
+                DATE <input class="secretbox3d" id="secretbox3d" type="date" name="date">
             </div>
             <div class="secretbox2b">
-                TIME <input class="secretbox3e"  type="text" name="Search">
+                TIME <input class="secretbox3e"  type="text" name="time">
             </div>
             <div class="secretbox2c">
-                DESC <input class="secretbox3f" type="text" name="Search">
+                DESC <input class="secretbox3f" type="text" name="desc">
             </div>` 
             : 
             $('#box3b').empty())
     
         });
+
+
+    
 
     
     //When in the future if cancel is clicked on...
@@ -103,4 +125,7 @@ $(document).ready(() => {
         $('#box2a').addClass('box2aOFF');
         
     })
+
+
+
 })

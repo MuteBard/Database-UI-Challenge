@@ -20,8 +20,8 @@ public class AppointmentDao {
 	public List<Appointments> getAllAppointments() {
 		return jdbcTemplate.query(GET_APPOINTMENTS, new BeanPropertyRowMapper<>(Appointments.class));
 	}
-	public void addAppointment(String bookdate, String booktime, String description) {
-		jdbcTemplate.update(ADD_APPOINTMENT, bookdate, booktime, description, new BeanPropertyRowMapper<>(Appointments.class));
+	public void addAppointment(String date, String time, String desc) {
+		jdbcTemplate.update(ADD_APPOINTMENT, date, time, desc);
 	}
 	
 //	(ida ,species, name, ebells, months, rarity, eimage)

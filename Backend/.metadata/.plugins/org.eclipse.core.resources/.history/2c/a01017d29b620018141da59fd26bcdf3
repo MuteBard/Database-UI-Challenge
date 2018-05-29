@@ -1,0 +1,3 @@
+spring.datasource.url = jdbc:postgresql://localhost:5432/Appointments
+spring.datasource.driver-class-name= org.postgresql.Driver
+spring.datasource.hikari.maximum-pool-size = 2
