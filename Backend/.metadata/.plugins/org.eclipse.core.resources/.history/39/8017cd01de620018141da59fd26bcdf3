@@ -24,4 +24,6 @@ public class AppointmentDao {
 		jdbcTemplate.update(ADD_APPOINTMENT, date, time, desc);
 	}
 	
+//	(ida ,species, name, ebells, months, rarity, eimage)
+	
 }
