@@ -19,7 +19,11 @@
     /* border : 5px solid blueviolet; */
 }
 
-
+.errors{
+    color: red;
+    font-size: 0.8em;
+    margin : 1em 0 1em 0;
+}
 
 .box2aOFF{
     /* border : 5px solid greenyellow; */

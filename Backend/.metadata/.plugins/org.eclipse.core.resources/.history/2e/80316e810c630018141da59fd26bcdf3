@@ -33,7 +33,8 @@ public class AppointmentDao {
 		Connection con = DriverManager.getConnection ("jdbc:postgresql://localhost:5432/Appointments");
 	    PreparedStatement statement = con.prepareStatement(GET_MATCHING_APPOINTMENTS);
 	    statement.setString(1, query);
-	     
+	    
+	    
 	    //If you're executing the query and expecting a ResultSet then you can simply call ResultSet's getStatement()
 	    ResultSet rs = statement.executeQuery();
 	    String executedQuery = rs.getStatement().toString();

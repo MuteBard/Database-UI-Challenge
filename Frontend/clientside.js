@@ -1,9 +1,13 @@
-var isFutureDate = (dateString) => new Date(dateString) > new Date()
-// var getData = (string) => alert(string)
+let convertData = (obj) => {
+    let dateStr = (new Date(obj.date)).toString()
+    let dateArr = dateStr.split(' ')
+    obj["date"] =`${dateArr[1]} ${dateArr[2]}`
+    return obj
+}
 
 
+ 
 $(document).ready(() => {
-
 
     //make a GET request upon pressing get Search button    
     $("#searchbutton").on("click", () => {
@@ -68,21 +72,49 @@ $(document).ready(() => {
     $('#addNew').click(() => {
 
         if ($('form').attr("onsubmit") == "return true"){
-            $("form").submit((e) => {
-                
-              });
+
             let json = {}
             //create an array of the serialized data obtained and put it in a for..of loop to properly construct some json
             for(let obj of $('form').serializeArray()){
                 json[obj.name] = obj.value
-            }      
+            }
+
+            let sanitation = (obj) => {
+                $('#errors').empty();
+                let report = {"valid" : true, "message" : false}
+                if(new Date(obj.date) < new Date() || obj.date == ""){
+                    report["valid"] = false
+                    report["message"] = `<div>Value for date is invalid</div><br>`
+                } 
+                if(obj.time == ""){ 
+                    report["valid"] = false
+                    report["message"] += `<div>Value for time is invalid</div><br>`
+                }
+                if(obj.description == ""){
+                    report["valid"] = false
+                    report["message"] += `<div>Value for description is empty</div>`
+                }
+
+                return report
+            }
+
+            sanitation(json).valid == true
+            
+            ?
+
             $.ajax({
                 url: `http://localhost:8080/addAppointment`,
-                data: JSON.stringify(json),
+                data: JSON.stringify(convertData(json)),
                 method: 'post',
                 dataType: 'JSON',
                 contentType: 'application/json'  
             })
+
+            :
+
+            $('#errors').append(sanitation(json).message);
+
+
         }
 
         //Toggle the text inside the New button to Add.
@@ -105,6 +137,7 @@ $(document).ready(() => {
         //originally, adding the three input boxes would make styling off center. Therefore, when
         //the class is box2aOFF is activated when the button says new and is the class
         //box2aON is activated when the button says Add.
+        
         $('#box2a').removeClass('box2aOFF');
         $('#box2a').addClass('box2aON');
         
@@ -125,7 +158,7 @@ $(document).ready(() => {
                 DATE <input class="secretbox3d" id="secretbox3d" type="date" name="date">
             </div>
             <div class="secretbox2b">
-                TIME <input class="secretbox3e"  type="text" name="time">
+                TIME <input class="secretbox3e"  type="time" name="time">
             </div>
             <div class="secretbox2c">
                 DESC <input class="secretbox3f" type="text" name="desc">
